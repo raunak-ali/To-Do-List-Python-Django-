@@ -1,0 +1,14 @@
+{% extends 'p/base.html' %}
+{% block content %}
+<h1>Create your Articles here </h1>
+<form method = 'POST' action="/createTodo/" class="form-group">
+{% csrf_token %}
+<div class="input-group mb-3">
+<div  class="input-group-prepend">
+<button type='submit'name="save" value='Save' class="btn btn-success">CREATE</button>
+</div>
+{{ form.name}}
+</div>
+</form>
+
+{% endblock %}
